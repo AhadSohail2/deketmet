@@ -1,0 +1,15 @@
+.itemContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+}
+.itemIcon {
+  border-radius: 50%;
+  padding: 10px ;
+  background-color: var(--primaryColor);
+  color: white;
+}
+.itemIcon svg{
+  font-size: var(--size8);
+}

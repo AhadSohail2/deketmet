@@ -1,0 +1,17 @@
+.head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: var(--size2);
+}
+.head h3{
+    color: var(--primaryColor);
+    font-size: var(--size7);
+}
+.head h2{
+    font-size: var(--size9);
+}
+.head p{
+    width: 90%;
+}

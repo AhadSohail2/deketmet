@@ -1,0 +1,49 @@
+.heroContentInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: var(--size3);
+  text-align: center;
+}
+.heroContentInfo h1 {
+  font-family: var(--HeadingFont);
+  font-weight: 400;
+  letter-spacing: var(--size1);
+  font-size: var(--size12);
+  color: var(--primaryColor);
+}
+.heroContentInfo h2 {
+  font-family: var(--secondaryFont);
+}
+.heroContentInfo h3 {
+  font-family: var(--mainFont);
+  color: var(--grey);
+}
+.heroContentInfo p {
+  font-family: var(--mainFont);
+  color: var(--grey);
+}
+.heroContentInfo a {
+  font-family: var(--mainFont);
+  font-weight: 600;
+  background-color: var(--primaryColor);
+  padding: var(--size1) var(--size5);
+  color: white;
+  border-radius: 4px;
+}
+.heroContentIcons{
+    margin-top: 30px;
+}
+.heroContentIcons svg {
+  color: var(--blackGrey);
+  margin-right: var(--size2);
+}
+
+@media screen and (max-width:550px) {
+  .heroContentInfo h1 {
+    font-weight: 400;
+    letter-spacing: var(--size1);
+    font-size: var(--size11);
+    color: var(--primaryColor);
+  }
+}

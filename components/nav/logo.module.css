@@ -1,0 +1,14 @@
+.link{
+    flex: 2;
+}
+.link img{
+    width: 240px;
+}
+@media screen and (max-width:550px) {
+    .link{
+        width: 100%;
+    }
+    .link img{
+        width: 160px !important;
+    }
+  }

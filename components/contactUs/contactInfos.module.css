@@ -1,0 +1,11 @@
+.contactInfosWraper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: var(--size12);
+}
+@media screen and (max-width:1000px) {
+    .contactInfosWraper{
+        row-gap: var(--size3);
+    }
+}

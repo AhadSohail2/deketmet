@@ -1,0 +1,29 @@
+.aboutUs{
+    margin-top: var(--size12);
+    position: relative;
+}
+.aboutUsStyleLine svg{
+    width: 250px;
+}
+.aboutUsContainer{
+    display: flex;
+    justify-content: space-between;
+    column-gap: var(--size8);
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 100px;
+}
+
+@media screen and (max-width:1144px) {
+    .aboutUsStyleLine{
+        display: none;
+    }
+    .aboutUsContainer{
+        position: static;
+        flex-direction: column;
+        row-gap: var(--size8);
+        column-gap: 0px;
+    }
+
+}

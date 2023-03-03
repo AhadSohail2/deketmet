@@ -1,0 +1,10 @@
+.portfolioContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+    text-align: center;
+    margin-top: var(--size12);
+    font-family: var(--mainFont);
+}

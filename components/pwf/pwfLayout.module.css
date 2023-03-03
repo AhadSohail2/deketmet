@@ -1,0 +1,25 @@
+.pwfContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: var(--size12);
+    margin-top:var(--size10);
+}
+
+@media screen and (max-width:796px) {
+    .pwfContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        row-gap: var(--size8);
+        flex-wrap: wrap;
+    }
+    .pwfContainer p{
+        width: 50%;
+    }
+}
+@media screen and (max-width:550px) {
+    .pwfContainer p{
+        width: 100%;
+    }
+}

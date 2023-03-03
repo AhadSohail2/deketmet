@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@700&display=swap");
+@font-face {
+  font-family: "impact";   /*Can be any text*/
+  src: local("AirbnbCerealLight"),
+    url("/fonts/impact.ttf") format("truetype");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+html{
+  overflow-x: hidden;
+}
+body {
+  /* Colors */
+  --primaryColor: #05386b;
+  --secondaryColor: #377a7a;
+  --lightGreen: #0cc431;
+  --blackGrey: #3c3c3c;
+  --grey: #6c6c6c;
+  --mediumGrey: #707070;
+  --lightGrey: #f2f2f2;
+  --white: #ffffff;
+  /* Size */
+  --size1: 0.5rem;
+  --size2: 0.7rem;
+  --size3: 0.9rem;
+  --size4: 1rem;
+  --size5: 1.2rem;
+  --size6: 1.3rem;
+  --size7: 1.5rem;
+  --size8: 2rem;
+  --size9: 3rem;
+  --size10: 3.5rem;
+  --size11: 4rem;
+  --size12: 6rem;
+  --size13: 12rem;
+  --size14: 24rem;
+
+  /* fontsMain */
+  --mainFont: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --secondaryFont: roboto;
+  --HeadingFont: impact;
+
+  
+
+}
+/* Pre Styles */
+.container{
+  padding: 0px var(--size8);
+}
+div {
+  font-size: inherit;
+}
+a {
+  text-decoration: none;
+}
+
+@media screen and (max-width:1043px) {
+  html{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width:909px) {
+  html{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width:550px) {
+  .container{
+    padding: 0px var(--size3);
+  }
+}

@@ -1,0 +1,8 @@
+.servicesContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: var(--size10);
+    column-gap: var(--size10);
+}

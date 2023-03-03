@@ -1,0 +1,14 @@
+.NavContainer {
+  border-bottom: 0.4px solid var(--mediumGrey);
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 21;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: var(--size12);
+  padding: 10px 0px;
+}
