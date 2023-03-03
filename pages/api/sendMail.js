@@ -1,20 +1,20 @@
-import sendgrid from "@sendgrid/mail";
+import { MongoClient } from 'mongodb'
 
-sendgrid.setApiKey("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");
+const uri = 'mongodb+srv://Ahad:AhadSohail2006@cluster0.fdd7wah.mongodb.net/?retryWrites=true&w=majority'
 
 async function sendEmail(req, res) {
   try {
-    // console.log("REQ.BODY", req.body);
-    await sendgrid.send({
-      to: "ahadsohailsana@gmail.com", // Your email where you'll receive emails
-      from: "ahadsohail4@gmail.com", // your website email address here
-      subject: `${req.body.subject}`,
-      html: `
-      <div>${req.body.message}</div>
-      <div>${req.body.whatsapp}</div>
-      <div>${req.body.email}</div>
-      `,
-    });
+    const client = await MongoClient.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+    const db = client.db('data')
+
+    const data = req.body // Assumes incoming data is in JSON format
+
+    const result = await db.collection('data').insertOne(data)
+
+    res.status(201).json({ message: 'Data stored successfully!' })
+
+    client.close()
+
   } catch (error) {
     // console.log(error);
     return res.status(error.statusCode || 500).json({ error: error.message });
