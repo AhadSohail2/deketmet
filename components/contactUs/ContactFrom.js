@@ -1,9 +1,11 @@
 import React, { useRef, useState } from 'react'
+import LoadingSpinner from '../UI/LoadingSpinner';
 import styles from './contactForm.module.css';
 
 function ContactFrom() {
 
   const [emailSent, setEmailSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const nameRef = useRef();
   const WhatsappRef = useRef();
@@ -11,7 +13,7 @@ function ContactFrom() {
   const subjectRef = useRef();
   const messageRef = useRef();
 
-  const submitHandler = (event) => {
+  const submitHandler = async (event) => {
     event.preventDefault();
 
     const name = nameRef.current.value;
@@ -31,17 +33,20 @@ function ContactFrom() {
         message: message
       })
     };
-
-    fetch('../../api/sendMail', requestOptions)
+    setLoading(true);
+    await fetch('../../api/sendMail', requestOptions)
       .then(response => {
         if (!response.ok) {
+          setLoading(false)
           return console.log(response)
         }
-       return response.json()
+        return response.json()
       }
       )
 
       .then((data) => {
+        setLoading(false)
+        document.getElementById("contactForm").reset();
         setEmailSent(true)
       })
       .catch(err => { console.log(err) })
@@ -49,16 +54,18 @@ function ContactFrom() {
 
 
   return (
-    <form data-aos="flip-up" onSubmit={submitHandler} className={styles.form}>
-      {emailSent && <h3>We will contact you soon</h3>}
-      <input type="text" ref={nameRef} placeholder='Your Name' required={true}></input>
-      <input type="text" ref={WhatsappRef} placeholder='Whatsapp Number(Optional)'></input>
-      <input type="text" ref={emailRef} placeholder='Your Email' required={true}></input>
-      <input type="text" ref={subjectRef} placeholder='Subject' required={true}></input>
-      <textarea rows="6" ref={messageRef} placeholder='Write your message Here' required={true}></textarea>
-      <input type="submit" value="Submit Now"></input>
-    </form>
-
+    <>
+      {loading && <LoadingSpinner />}
+      <form data-aos="flip-up" id="contactForm" onSubmit={submitHandler} className={styles.form}>
+        {emailSent && <h3>We will contact you soon</h3>}
+        <input type="text" ref={nameRef} placeholder='Your Name' required={true}></input>
+        <input type="text" ref={WhatsappRef} placeholder='Whatsapp Number(Optional)'></input>
+        <input type="text" ref={emailRef} placeholder='Your Email' required={true}></input>
+        <input type="text" ref={subjectRef} placeholder='Subject' required={true}></input>
+        <textarea rows="6" ref={messageRef} placeholder='Write your message Here' required={true}></textarea>
+        <input type="submit" value="Submit Now"></input>
+      </form>
+    </>
   )
 }
 

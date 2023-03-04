@@ -1,6 +1,6 @@
 import { MongoClient } from 'mongodb'
 
-const uri = 'mongodb+srv://Ahad:AhadSohail2006@cluster0.fdd7wah.mongodb.net/?retryWrites=true&w=majority'
+const uri = process.env.mongo_key;
 
 async function sendEmail(req, res) {
   try {
