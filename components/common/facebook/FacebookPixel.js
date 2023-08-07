@@ -9,6 +9,7 @@ const FacebookPixel = () => {
             .then((ReactPixel) => {
                 ReactPixel.init(process.env.NEXT_PUBLIC_FACEBOOK);
                 ReactPixel.pageView();
+                ReactPixel.track("Page View", { page: "Main" })
 
                 Router.events.on("routeChangeComplete", () => {
                     ReactPixel.pageView();
