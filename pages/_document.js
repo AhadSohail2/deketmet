@@ -9,7 +9,6 @@ export default function Document() {
       </Head>
       <body>
         <Main />
-        <FacebookPixel />
         <NextScript />
       </body>
     </Html>

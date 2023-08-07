@@ -1,5 +1,6 @@
 // components/FacebookPixel.js
 import React from "react";
+import Router from "next/router";
 
 const FacebookPixel = () => {
     React.useEffect(() => {
