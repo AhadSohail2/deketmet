@@ -1,0 +1,109 @@
+.container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.container h3 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.container .subHead {
+  font-weight: 600;
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--mainColor);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  column-gap: 60px;
+  margin-top: 50px;
+}
+.content .paraContent {
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.content .paraContent p {
+  width: 450px;
+  line-height: 25px;
+  letter-spacing: 1px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  row-gap: 20px;
+  column-gap: 50px;
+}
+.cards div {
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.cards div:nth-child(1),
+.cards div:nth-child(4),
+.cards div:nth-child(5),
+.cards div:nth-child(8) {
+  color: var(--mainColor);
+}
+.cards div:nth-child(2),
+.cards div:nth-child(3),
+.cards div:nth-child(6),
+.cards div:nth-child(7) {
+  color: white;
+  background-color: var(--mainColor);
+}
+
+@media screen and (max-width: 1316px) {
+  .cards {
+    grid-template-columns: repeat(2, 160px);
+  }
+}
+@media screen and (max-width: 974px) {
+  .cards {
+    column-gap: 10px;
+  }
+}
+@media screen and (max-width: 936px) {
+  .content {
+    margin-top: 10px;
+    flex-direction: column-reverse;
+    row-gap: 40px;
+  }
+  .cards {
+    grid-template-columns: repeat(2, 200px);
+    column-gap: 60px;
+  }
+}
+@media screen and (max-width: 530px) {
+  .cards {
+    column-gap: 20px;
+  }
+  .content .paraContent p {
+    width: 75vw;
+  }
+}
+@media screen and (max-width: 458px) {
+  .cards {
+    grid-template-columns: repeat(1, 80vw);
+    column-gap: 20px;
+  }
+  .cards div:nth-child(even) {
+    background-color: var(--mainColor);
+    color: white;
+  }
+  .cards div:nth-child(odd) {
+    background-color: white;
+    color: var(--mainColor);
+  }
+}

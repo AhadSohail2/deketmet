@@ -1,0 +1,75 @@
+.container {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2.3rem;
+  font-weight: 700;
+  font-family: var(--secondFont);
+  margin-bottom: 10px;
+}
+.subHead {
+  font-family: var(--secondFont);
+  font-weight: 700;
+  margin-top: -5px;
+  color: var(--mainColor);
+  font-size: 1.3rem;
+  margin-bottom: 50px;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
+  margin-bottom: 20px;
+}
+.card {
+  width: 466px;
+  padding: 40px 40px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.card h4 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: var(--mainColor);
+}
+.card p {
+  text-align: left;
+  margin-top: 20px;
+  letter-spacing: 0.1em;
+  line-height: 25px;
+}
+.cardLink {
+  margin-top: 40px;
+}
+.cardLink a {
+  background-color: var(--mainColor);
+  color: white;
+  font-family: var(--mainFont);
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 1000px) {
+  .cards{
+    flex-direction: column;
+    row-gap: 40px;
+  }
+} 
+@media screen and (max-width: 500px) {
+  .card {
+    width: 400px;
+    padding: 20px 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+} 
+@media screen and (max-width: 450px) {
+  .card {
+    width: 90vw;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+} 

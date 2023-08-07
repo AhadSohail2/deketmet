@@ -1,0 +1,95 @@
+.container{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    column-gap: 20vw;
+    height: 500px;
+}
+.slider {
+  width: 250px;
+  overflow: hidden;
+  align-self: center;
+  position: relative;
+}
+.slider div {
+  position: relative;
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+  animation: slide 7s infinite linear;
+  border-radius: 5px;
+}
+.content{
+    width: 50%;
+    flex-direction: column;
+
+}
+.content h2{
+    font-family: var(--mainFont);
+    font-weight: 700;
+    font-size: 3rem;
+}
+.content span{
+    display: block;
+    font-weight: 800;
+    font-size: 5rem;
+    color: var(--mainColor);
+}
+.aboutBtn{
+  margin-top: 25px;
+}
+.content p{
+  margin-top: 10px;
+}
+.content .aboutBtn a{
+  background-color: var(--mainColor);
+  color: white;
+  font-family: var(--mainFont);
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+.socialLinks{
+  margin-top: 10px;
+  display: flex;
+  column-gap: 10px;
+}
+.socialLinks a i{
+  font-size: 1.9rem;
+  color: #1c1d1f;
+}
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1230px);
+  }
+}
+
+@media screen and (max-width:880px) {
+  .container{
+    margin-top: 50px;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    row-gap: 100px;
+    margin-bottom: 50px;
+  }
+  .slider{
+    justify-self: center;
+  }
+  .content{
+    width: 100%;
+  }
+}
+@media screen and (max-width:700px) {
+  .container{
+    height: 440px;
+  }
+}
+@media screen and (max-width:492px) {
+  .content h2{
+    font-size: 4em;
+}
+}
