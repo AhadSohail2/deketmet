@@ -3,6 +3,7 @@ import '../styles/globals.css';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import FacebookPixel from '../components/common/facebook/FacebookPixel';
+import Google from '../components/common/google/Google';
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
@@ -11,7 +12,8 @@ function MyApp({ Component, pageProps }) {
   }, []);
   return <>
     <Component {...pageProps} />
-    <FacebookPixel/>
+    <Google />
+    <FacebookPixel />
   </>
 }
 
